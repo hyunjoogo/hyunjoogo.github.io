@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/hambaknoon/static/css/main.96d2da32.css",
-    "main.js": "/hambaknoon/static/js/main.f425e0e1.js",
-    "index.html": "/hambaknoon/index.html",
-    "main.96d2da32.css.map": "/hambaknoon/static/css/main.96d2da32.css.map",
-    "main.f425e0e1.js.map": "/hambaknoon/static/js/main.f425e0e1.js.map"
+    "main.css": "/static/css/main.96d2da32.css",
+    "main.js": "/static/js/main.c2d667f2.js",
+    "index.html": "/index.html",
+    "main.96d2da32.css.map": "/static/css/main.96d2da32.css.map",
+    "main.c2d667f2.js.map": "/static/js/main.c2d667f2.js.map"
   },
   "entrypoints": [
     "static/css/main.96d2da32.css",
-    "static/js/main.f425e0e1.js"
+    "static/js/main.c2d667f2.js"
   ]
 }

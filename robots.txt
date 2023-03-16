@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://hyunjoogo.github.io/sitemap-index.xml
+Host: https://hyunjoogo.github.io

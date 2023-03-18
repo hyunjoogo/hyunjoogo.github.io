@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Lanky",
+  title: "Lanky.Blog",
   description: "Hello :) I'm Lanky.",
   author: "Hyunjoo",
   siteUrl: "https://hyunjoogo.github.io",

@@ -95,18 +95,18 @@ const Bio = () => {
           <Link link={github}>
             <FaGithub />
           </Link>
-          <Link link={kaggle}>
-            <FaKaggle />
-          </Link>
-          <Link link={instagram}>
-            <FaInstagram />
-          </Link>
-          <Link link={facebook}>
-            <FaFacebook />
-          </Link>
-          <Link link={linkedIn}>
-            <FaLinkedin />
-          </Link>
+          {/*<Link link={kaggle}>*/}
+          {/*  <FaKaggle />*/}
+          {/*</Link>*/}
+          {/*<Link link={instagram}>*/}
+          {/*  <FaInstagram />*/}
+          {/*</Link>*/}
+          {/*<Link link={facebook}>*/}
+          {/*  <FaFacebook />*/}
+          {/*</Link>*/}
+          {/*<Link link={linkedIn}>*/}
+          {/*  <FaLinkedin />*/}
+          {/*</Link>*/}
           <Link link={email}>
             <FaEnvelope />
           </Link>

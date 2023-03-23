@@ -1,4 +1,196 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lanky.Blog]]></title><description><![CDATA[Hello :) I'm Lanky.]]></description><link>https://hyunjoogo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 18 Mar 2023 09:25:39 GMT</lastBuildDate><item><title><![CDATA[🥳 블로그를 시작하며]]></title><description><![CDATA[안녕하세요? Lanky입니다. 현재 프론트엔드 프로그래머로 일하고 있습니다. 블로그… 제가 해보겠습니다! 개발자로써 첫 발을 내딛은 것이 20년 2월이었습니다. 회사 생활을 하면서 블로그도 운영하겠다는 큰 포부’만’ 가진채로 2년+…]]></description><link>https://hyunjoogo.github.io/hello-lanky-kr/</link><guid isPermaLink="false">https://hyunjoogo.github.io/hello-lanky-kr/</guid><pubDate>Sat, 18 Mar 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요? Lanky입니다. 현재 프론트엔드 프로그래머로 일하고 있습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lanky.Blog]]></title><description><![CDATA[Hello :) I'm Lanky.]]></description><link>https://hyunjoogo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 23 Mar 2023 14:35:38 GMT</lastBuildDate><item><title><![CDATA[🔔 4. Google Chat을 이용해 배포 알림 받기: 쉘 스크립트로 간단하게 설정하는 방법]]></title><description><![CDATA[여러분이 작업한 프로젝트를 배포하는 과정에서 다른 팀원들에게 알리고 싶다면 어떻게 해야 할까요? 다양한 메시지를 통하여 알림을 보낼 수가 있습니다. 제가 다니는 회사가 Slack(슬랙)을 이용하다가 이제는 Google Chat…]]></description><link>https://hyunjoogo.github.io/notifications-google-chat/</link><guid isPermaLink="false">https://hyunjoogo.github.io/notifications-google-chat/</guid><pubDate>Thu, 23 Mar 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;여러분이 작업한 프로젝트를 배포하는 과정에서 다른 팀원들에게 알리고 싶다면 어떻게 해야 할까요? 다양한 메시지를 통하여 알림을 보낼 수가 있습니다.&lt;br&gt;
+제가 다니는 회사가 Slack(슬랙)을 이용하다가 이제는 Google Chat(구글 챗)을 사용하게 되었습니다. 마이그레이션하는 과정에서 알게된 쉘 스크립트를 이용해 배포 알림을 보내는 방법을 소개하겠습니다.&lt;/p&gt;
+&lt;h2&gt;1. Google Chat Webhook URL 설정하기&lt;/h2&gt;
+&lt;p&gt;Google Chat에서 알림을 받으려면 먼저 webhook URL을 설정해야 합니다. Webhook URL은 Google Chat에서 제공하는 고유한 주소로, 이 주소로 메시지를 보내면 Google Chat에
+알림이 표시됩니다. Google Chat에서 새로운 webhook URL을 생성하는 방법은 다음과 같습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Google Chat의 대화방에 들어갑니다.&lt;/li&gt;
+&lt;li&gt;채팅방 좌측 상단에 있는 설정에서 “앱 및 통합”을 선택합니다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 313px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/ecbe7bd16f499425ac77797aa7e6fa47/8e749/sc001.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 221.1764705882353%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAsCAYAAABloJjNAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFSUlEQVRIx6VX2XIaRxTVh0S2JFu7QIJhFvYROwiEAAkQq9Bmp5JypfKUxK48JJWXbJU/Prmnh5YHBFipPNzqnr7N7bud081aMnWKwXCM0XiC4egG/cEIk9t79PpD1C+auGi0lBwcBvF64w02t7ZXylq+UMJPHz/h9z/+xMdPP+OXX3/DX3//gx9+/Ih25xp3949qPAqcYP3VJjY23yrDy2Qtmyvi2w/fYTy5kx+/w+TuQXn3+P4b3D28V/NOlwaP8dX6xkqD1K2l0hllpHs9kJAn8uM+WlcdjG5u5ZB7td5sXuLw6HhlyPqgNYZi2TFETBuWFZXRUWJELIQNS81tJ670RmSxcM/2zj5evd7CGpOdzZVQqpwrxUXjUgozlrz1xLs+rnsDdeAq4YE7uweeQXrIsE+zBZjiIauey5eQkW+OaTejPKVumdDg7t6hl0N6mMkWUShVYYqHNNJstXFWreM0k0ftvKG8XuSZ36Av5IAYO0Ot3lLKosxpgAYLhTJal23U603lpT9vzLflM7izOzUYkJBNWYilJDRROok0XGmlpJuDE08jeZqDKxFkixWkMwWl42iIh0qs2KzBXQm5lC+iVa4gFTHRPa/j6/EYN+0OLitnuLvu4XEwxPvRGINmCzedjtqTNi24lq1GOrStDVpHR3h0wuiZIfQixxjaYTX2zROMHAPXRhDtk0N0w0F0QgGRIzVyT1dkZATQsgy8kSq/psHK3lsMinmkGx0YEmJ38oDm4Abt8R0ePnyPdKmGw0gUQScpkvgsdgIBkWM7jvtIAPs7e1inQVM8fBcNYxiz5MQTDJyIkqHIOG6hZ4XRMY6Vrjv1Sktb1sbiYcPv4UEgBMeJIS35cy0vL94oMs3Tqe1MxfZE7fHGhCXIiiY+N3ZgCr2QGVVVOzZshCIOTmQ8kfYISW8Gw5asW2rOdXaDIaFyf0TE8VeZoGcDZ6QdbFGy58rlKmq1C1SlF7OCmGbzCuf1hjR9EZVKDXFpLYJAN7c9bzAnDZyWfqPiqt1VaCHLXF51VYMTz8Q15w1hnmTKVbhfapAnJgTD3MQ5sU1kaHSEwuYT82hcz0PvySChx3Arcjo3ty47ciXcfJFh/EZnDGo+pDG9QYfzUnnmoSYHKie3D+j3Rx7RTslTkaiPTOcJ9lkOk0IMLAq9qwvTVIWy+J1ys2okV6pRSCEta0xRRkiZY9rNLQ5ZUZKM2gA3u9JOWal4sVxDvlBR3UCjRWmrvLAPR+59ZtCRTtfJLZ/VpW3KMKZVfQpVy5dCpkHvEnKeEuxdWt4PzZmLy36q7tKi8L5l78XiKaV0JWTeK+xF3ivUMW/6OxpLzhhd2Ifls3O02j2l4EuBzxGiYjS+VeOt3NvXvaG6DQlT7enCxmbIPFV7yCuVbcQqsgjMZ6V6odb4zWJ4hampoul7e2kOE8lTD4pJVx2iochRCx2Iiz4q+oUeckG7rwtAmf+eX18asm4bXTEt/w16B4sb288y86yy6uXgq3JQWiWvkk/luRAsGYfVZa5ewjpzWA6qviMfmnI/sOd0QTQXzlPWoqfIDDmQBIhZbqpftISVr5SHlKpcBYuMrSDYoAqXQOcmPn/ZwKR6vrFpXP/wRSETesyVE00+KXVxQhRfyC8yuLd/JI/NGq66A8UwvIz4b4CttKoX/TLroeSQBYhNuz4r4ZMECK2ivBkJOXIkIcdXLucalqQ6df2ugp7Ga1LgxmoTirG4dysSgjGBHruCerJ1POEuhx4N8jXLU/X9MSPza9PvhWyjIeRvhZeKo942U4N8aG+92fnfsrHp/fn5FxEMxmyJA5k/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;sc001&apos; title=&apos;sc001&apos; src=&apos;/static/ecbe7bd16f499425ac77797aa7e6fa47/8e749/sc001.png&apos; srcset=&apos;/static/ecbe7bd16f499425ac77797aa7e6fa47/e7570/sc001.png 170w,
+/static/ecbe7bd16f499425ac77797aa7e6fa47/8e749/sc001.png 313w&apos; sizes=&apos;(max-width: 313px) 100vw, 313px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;팝업창이 나오면 &quot;웹훅 추가&quot;를 클릭합니다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/034f4a5250d1f595f7cf52c2622ae9f5/41396/sc002.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 82.94117647058825%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6klEQVQ4y5WU7VLaQBSGcxed0nYkkpBgkBAg2XyRBQmOUkCxtVNHnen/fukt2OnP9kqcsXf49uwGkCjpND+e2WWzPDlnc84qlcpr7NZ07FR3JdVqTf4uQtMM1I0GdN18tv6SXIrVtJGOj7A4O5fMT87gB30iLgUfpNB0A4peNzEYphiRNOEH6CdDuF5QGiGtafVMGIRJ7iHzozy0mfnx8/UNgihZRkhnIexC5LFQkpNLfJr7/xnhFuEmbXq7HQ7gM579ecueQuFaKkaiS2kuLBNX737A+XADr+PQekRS8Tyfzb+FhEPzwzDGPXNwN+V48Z2jfuWBdUMplNIywlV656KEPjKotyFqX0L0ltGVEm6OtuuDJymGfATXfUzV80pGuD5s+iiTtzNMpnNZHrksWMmvLNaimMuCT/iQ5knhvsIIn9KjlFe4blaLHYqssxJTJXgUuWjXdaeEVOWFXbDRr1nHRDimczxmMXpU7E67BcfeB2O+vDCUxl5TbizqFHdZk2IMSDRmEebxCFMa36enuPj6C5fffuPo9BNUVYXS7Xny7d6W6Pwn0fWJKaU2G59gEh/genaJzz8fiD9YXN9mQrvtoLlvSyyrBavZgtmwYJh763tPHItAIwzC1HQ06CLQaFSrOxIxr7x6g78LFyxEwslnHgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;sc002&apos; title=&apos;sc002&apos; src=&apos;/static/034f4a5250d1f595f7cf52c2622ae9f5/ca1dc/sc002.png&apos; srcset=&apos;/static/034f4a5250d1f595f7cf52c2622ae9f5/e7570/sc002.png 170w,
+/static/034f4a5250d1f595f7cf52c2622ae9f5/f46e7/sc002.png 340w,
+/static/034f4a5250d1f595f7cf52c2622ae9f5/ca1dc/sc002.png 680w,
+/static/034f4a5250d1f595f7cf52c2622ae9f5/02d09/sc002.png 1020w,
+/static/034f4a5250d1f595f7cf52c2622ae9f5/9d567/sc002.png 1360w,
+/static/034f4a5250d1f595f7cf52c2622ae9f5/41396/sc002.png 1610w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;채팅방에 나오게 될 웹훅 이름과 아이콘을 설정한 후 &quot;저장&quot;을 클릭합니다. 저는 TEST라는 이름을 사용해서 사용할 예정입니다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/bb7d63d5074c636d86962f0313df222e/809bd/sc003.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 77.05882352941177%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACSElEQVQ4y4VT2VLbQBDkA3IQjC/shKMghxM7lnWujpUl4yCIKcrEDglFVb4lD/mJ/GynZyUMuEjy0DWrmVXP9OzMRnunC53muLq6xvxyicXyG8JIww9iBOohxDdyYzheBM8rfSpMECcZkiRFo9HChhBKQGfHJmh7Cp7PH/xwBZc+1wuM9YOHfrGOGyDRYzSbFaGicxxE8GkTsXKRP0oCSRbFqVERJ+NVtRK7j3SclxXW6k38uPiC3z9/Qb/uYf62j3cHh/jw0TJEQtIfDPFqdw+9Xh+xzugviUPGA5JJhTElmwqb7Q5OeOGmmJlM0j8hEqsU+8PzYGBhf/8Avff9Vcz0tKpWZIvkhhC2Oi+ReCFOXQUnjA1suaTkzOzyo5CwMiF/THKg7klusYcpX2+hJ0bCd6VxTUxZxSIsMScKwotZNe+U0BVSk3wluU3JPrMsJ2eY5AW+jgtcE9OsPF8S5zzPaSPGNZHcg56cQiX5HeHe3iEcvuy5EyKk9CFHxiIcY0OMCLuy3qOIzPiYORTCbncXLku+YJaMoxGIjKiUEq5BrcH4SeSvS5anz04+I/90ZgZc51NEOufl8V+QGasEfCzPbEtFuMNH8Sk5pFPs7XzJ2XWDakvWQL/DzUnZohlx7Kq71dvh2MjP66t2258H/TL3FEfomAVo3AQJptMCM87xlNXWb1fPsl0MLQfWyDUY2d4/Yds+hrQF7dJRyGkDrmq90cTGk6fP0GGVR0dv0Gy10WJPa7U6tmrb/8Vzora1jRfV9+bmFv4ACQ/ngKBmk+8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;sc003&apos; title=&apos;sc003&apos; src=&apos;/static/bb7d63d5074c636d86962f0313df222e/ca1dc/sc003.png&apos; srcset=&apos;/static/bb7d63d5074c636d86962f0313df222e/e7570/sc003.png 170w,
+/static/bb7d63d5074c636d86962f0313df222e/f46e7/sc003.png 340w,
+/static/bb7d63d5074c636d86962f0313df222e/ca1dc/sc003.png 680w,
+/static/bb7d63d5074c636d86962f0313df222e/809bd/sc003.png 821w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;이렇게 생성된 webhook URL을 복사합니다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/18ad24feaba7f098eec69a6694c77dda/42cbc/sc004.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 40%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABgUlEQVQoz42Sy07CUBCG+w7GjeUOGuiFgqX3Gy1gUGgRCAuvEMMCE3Rr4sq1iYnxLXwEEzcmvtfvFNRgiNHFlzk9Z/r/c+YMw7JJ8EIZHC9CECQIokTr8iLy9C1yIjhOQLG0TmmFODeTyYHJZgvwgxZ6hwOEUR/9wQiabkElVuNvqJoJw3Lhuj4VUQaTJtVY8KATwfUCmHSofib+By2OqrEQ5XkBTC5XgFzTIJZ3oZOQodswTQfGH5imC4Viw3Aw1Ry03QCcIIJh2RROTs8xnV0is7GJZjKLLYo71FONfqiRifKFYX+vq6qOEZnPSOxWNhGRQTGuMJFMYzAcYTy5gFdV0FEMNGs69sk5tOuEj8hZ0nMCwsfAayF0mxjaDRwRXd2BReZcLJjPb6NGPZAqMiwSMcnVpkosqsKi/vzEgi4ruLp7xs3TO+b3L7h+fMP84RX1ZoemgaMrJ1L0OpXF6JTomuss9zk65ykvHi97bwQ/nMDvnMHvjuG1jyFKMlg2gQ93egw0dYvGVwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;sc004&apos; title=&apos;sc004&apos; src=&apos;/static/18ad24feaba7f098eec69a6694c77dda/ca1dc/sc004.png&apos; srcset=&apos;/static/18ad24feaba7f098eec69a6694c77dda/e7570/sc004.png 170w,
+/static/18ad24feaba7f098eec69a6694c77dda/f46e7/sc004.png 340w,
+/static/18ad24feaba7f098eec69a6694c77dda/ca1dc/sc004.png 680w,
+/static/18ad24feaba7f098eec69a6694c77dda/02d09/sc004.png 1020w,
+/static/18ad24feaba7f098eec69a6694c77dda/9d567/sc004.png 1360w,
+/static/18ad24feaba7f098eec69a6694c77dda/42cbc/sc004.png 1600w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;주소는 &lt;code class=&quot;language-text&quot;&gt;https://chat.googleapis.com/v1/spaces/스페이스이름/messages?key=yyyyy&amp;amp;token=zzzzz&lt;/code&gt;
+와 유사한 형식을 가지게 됩니다. 웹훅의 이름, 아이콘을 수정하거나 삭제할 수 있습니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;화면의 주소와 여러분의 주소가 다를 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;webhook을 생성하면 채팅방에 알림이 가게 됩니다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/6af6d48d7aa779e4861ff589d5bafa78/07e4e/sc006.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 32.35294117647059%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA/UlEQVQY002Q207DMBBE/QpVALWiVQskzaVpEju+Ji0g/v+3Bu9WjvIw8trrGZ+1KKsLkqq6xaAMZFQ3jBik5loqC20D70ftoUYb68c98qwzRHGukXQuG2jjYdwUTQ5KO65J8/0XY+yF+Yf31s+8kmedIeggKS8qJtQmsIjSRDIicjGAen66L8R0Tp51hkhkX3nJTRqJwnoaj2j9DSoqfP8xFZESmYxhxk7sIW8iFam4dopfpJBEVDYt6sMJ4ZRj+Mix271jfzjyYzxyDKS/7Ppx+bIlkMahsD6Oee0kX/4sShyzV4TtHs3bFk/PG2TZCy5tD+tm/uMHgFtG/wcOVbAZL4Iz9gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;sc006&apos; title=&apos;sc006&apos; src=&apos;/static/6af6d48d7aa779e4861ff589d5bafa78/ca1dc/sc006.png&apos; srcset=&apos;/static/6af6d48d7aa779e4861ff589d5bafa78/e7570/sc006.png 170w,
+/static/6af6d48d7aa779e4861ff589d5bafa78/f46e7/sc006.png 340w,
+/static/6af6d48d7aa779e4861ff589d5bafa78/ca1dc/sc006.png 680w,
+/static/6af6d48d7aa779e4861ff589d5bafa78/07e4e/sc006.png 816w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;2. 쉘 스크립트 작성하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;복사한 webhook URL을 사용하여 쉘 스크립트를 작성해 봅시다. 쉘 스크립트는 간단한 쉘 명령어를 통해 운영 체제에 명령을 내리는 스크립트입니다.&lt;br&gt;
+추가적으로 사용자의 이름을 넣는 기능까지 추가해보았습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token shebang important&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 사용자 이름을 가져옵니다.&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;NAME&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;홍길동&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Google Chat webhook URL 설정&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;GOOGLE_CHAT_WEBHOOK_URL&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;복사한 webhook URL&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 프로젝트 이름을 변수로 설정합니다.&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;PROJECT&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;프로젝트이름&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 메시지 내용 생성 (사용자 이름 포함)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 나중에 내용을 변경하셔도 됩니다.&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;MESSAGE&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${NAME}&lt;/span&gt;님께서 &lt;span class=&quot;token variable&quot;&gt;${PROJECT}&lt;/span&gt;의 배포를 시전하였습니다.&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 메시지의 JSON 포맷 생성&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 혹시나 적용이 되지 않는다면 가장 바깥의 쌍따옴표(&quot;&quot;)를 홑따옴표(&apos;&apos;)로 변경하세요. &lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;json_message&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;{&quot;&lt;/span&gt;text&lt;span class=&quot;token string&quot;&gt;&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;&quot;${MESSAGE}&quot;&apos;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;}&quot;&lt;/span&gt;
+
+
+&lt;span class=&quot;token comment&quot;&gt;# 메시지를 Google Chat으로 전송&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-X&lt;/span&gt; POST &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+     &lt;span class=&quot;token parameter variable&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Content-Type: application/json&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+     &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$json_message&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+     &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$GOOGLE_CHAT_WEBHOOK_URL&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 스크립트는 다음과 같은 과정을 거칩니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 이름을 변수에 저장합니다.&lt;/li&gt;
+&lt;li&gt;앞서 설정한 Google Chat webhook URL을 변수에 저장합니다.&lt;/li&gt;
+&lt;li&gt;프로젝트 이름을 변수로 설정합니다.&lt;/li&gt;
+&lt;li&gt;메시지 내용을 생성합니다. 여러분이 원하시는 문구를 적어주시면 됩니다.&lt;/li&gt;
+&lt;li&gt;이를 JSON 포맷으로 변환합니다. 여기서는 사용자 이름과 함께 배포 알림 메시지를 구성하였습니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;curl&lt;/code&gt; 명령어를 사용하여 메시지를 Google Chat webhook URL로 전송합니다. 글 마지막에 추가 설명하도록 하겠습니다.&lt;/li&gt;
+&lt;li&gt;모든 과정이 끝나면 터미널에 실행 결과가 나옵니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. 쉘 스크립트 실행하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;스크립트를 실행하기 위해서는 파일에 실행 권한을 부여해야 합니다. 터미널에서 다음 명령어를 입력하여 스크립트 파일에 실행 권한을 부여합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 해당 Bash 스크립트가 있는 폴더&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;chmod&lt;/span&gt; +x deploy_notification.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;실행권한이 없이도 실행이 가능할 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;이제 스크립트를 실행할 준비가 되었습니다. 터미널에서 다음 명령어를 입력하여 스크립트를 실행해 보세요.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 해당 Bash 스크립트가 있는 폴더&lt;/span&gt;
+
+./deploy_notification.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;스크립트가 정상적으로 실행되면 Google Chat의 대화방에 배포 알림이 표시됩니다.
+&lt;span class=&apos;gatsby-resp-image-wrapper&apos; style=&apos;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; margin-bottom: 16px;&apos;&gt;
+      &lt;a class=&apos;gatsby-resp-image-link&apos; href=&apos;/static/497d179e2a6ba15493a4b125e3f56628/c0b05/sc005.png&apos; style=&apos;display: block&apos; target=&apos;_blank&apos; rel=&apos;noopener&apos;&gt;
+    &lt;span class=&apos;gatsby-resp-image-background-image&apos; style=&quot;padding-bottom: 8.235294117647058%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAcElEQVQI133M3QqCMADFcZ9BEqcyc7qpqcWs+REIddf7P9Hf1bV08YPDOXCC7SR4eTKTDFdLb1o63VDm6qfy2dQXtO+/VGk4FxWF0oeCdxizJZLRLQiRMkaCT5qzxhn3KMHeLG5+8vC7mxbqpvt7uAPVJjkzyZQBvwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&apos;gatsby-resp-image-image&apos; alt=&apos;sc005&apos; title=&apos;sc005&apos; src=&apos;/static/497d179e2a6ba15493a4b125e3f56628/ca1dc/sc005.png&apos; srcset=&apos;/static/497d179e2a6ba15493a4b125e3f56628/e7570/sc005.png 170w,
+/static/497d179e2a6ba15493a4b125e3f56628/f46e7/sc005.png 340w,
+/static/497d179e2a6ba15493a4b125e3f56628/ca1dc/sc005.png 680w,
+/static/497d179e2a6ba15493a4b125e3f56628/02d09/sc005.png 1020w,
+/static/497d179e2a6ba15493a4b125e3f56628/9d567/sc005.png 1360w,
+/static/497d179e2a6ba15493a4b125e3f56628/c0b05/sc005.png 1752w&apos; sizes=&apos;(max-width: 680px) 100vw, 680px&apos; style=&apos;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&apos; loading=&apos;lazy&apos; decoding=&apos;async&apos;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;여러분이 정하신 웹훅의 이름과 NAME, PROJECT, MESSAGE에 따라 다르게 표시될 수 있습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이 방법을 사용하면 팀원들에게 프로젝트의 배포 상황을 쉽게 공유할 수 있습니다. 원하는 경우에는 스크립트를 수정하여 보다 다양한 정보를 알림으로 전송할 수도 있습니다. 이제 여러분도 Google Chat을 활용하여
+프로젝트의 소통을 한층 더 강화해 보세요!&lt;/p&gt;
+&lt;h2&gt;추가 팁: 쉘 스크립트를 확장하여 더 많은 정보 전달하기&lt;/h2&gt;
+&lt;p&gt;이제 기본적인 배포 알림을 전송하는 방법을 배웠으니, 스크립트를 확장하여 더 많은 정보를 알림으로 전달하는 방법에 대해 알아봅시다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;배포 날짜와 시간 추가하기&lt;/p&gt;
+&lt;p&gt;배포 날짜와 시간을 알림에 추가하려면, 스크립트에 다음 코드를 삽입합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 현재 날짜와 시간을 가져옵니다.&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;CURRENT_TIME&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;date&lt;/span&gt; +&lt;span class=&quot;token string&quot;&gt;&quot;%Y-%m-%d %H:%M:%S&quot;&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# 메시지 내용에 날짜와 시간을 포함합니다.&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;MESSAGE&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${NAME}&lt;/span&gt;님께서 &lt;span class=&quot;token variable&quot;&gt;${PROJECT}&lt;/span&gt;의 배포를 시전하였습니다. (배포 시간: &lt;span class=&quot;token variable&quot;&gt;${CURRENT_TIME}&lt;/span&gt;)&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;메시지 형식 추가하기&lt;/p&gt;
+&lt;p&gt;Google Chat은 단순한 텍스트 뿐만 아니라 볼드체, 이탤릭체, 링크, 블록 인용 등 다양한 형식의 메시지를 지원합니다. 다음은 볼드체를 사용하여 메시지 형식을 변경한 예입니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# 메시지 내용에 날짜와 시간을 포함합니다.(볼드체 사용)&lt;/span&gt;
+&lt;span class=&quot;token assign-left variable&quot;&gt;MESSAGE&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;${NAME}&lt;/span&gt;님께서 *&lt;span class=&quot;token variable&quot;&gt;${PROJECT}&lt;/span&gt;*의 배포를 시전하였습니다. (배포 시간: &lt;span class=&quot;token variable&quot;&gt;${CURRENT_TIME}&lt;/span&gt;)&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;추가 설명 : curl&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;curl&lt;/code&gt;은 커맨드라인에서 사용하는 데이터 전송 도구로, URL을 이용해 다양한 프로토콜(HTTP, HTTPS, FTP, SMTP 등)을 사용하여 데이터를 주고받을 수 있습니다. 주로 웹 API와 상호작용할 때
+유용하게 사용됩니다.&lt;/p&gt;
+&lt;p&gt;스크립트에서 사용된 &lt;code class=&quot;language-text&quot;&gt;curl&lt;/code&gt; 명령어를 분석해 보겠습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-X&lt;/span&gt; POST &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+     &lt;span class=&quot;token parameter variable&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Content-Type: application/json&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+     &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$json_message&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+     &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$GOOGLE_CHAT_WEBHOOK_URL&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위의 &lt;code class=&quot;language-text&quot;&gt;curl&lt;/code&gt; 명령어는 다음과 같은 옵션을 사용합니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-X POST&lt;/code&gt;: &lt;code class=&quot;language-text&quot;&gt;-X&lt;/code&gt; 옵션은 사용할 HTTP 메서드를 지정합니다. 여기서는 POST 메서드를 사용하므로 &lt;code class=&quot;language-text&quot;&gt;-X POST&lt;/code&gt;를 사용합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-H &apos;Content-Type: application/json&apos;&lt;/code&gt;: &lt;code class=&quot;language-text&quot;&gt;-H&lt;/code&gt; 옵션은 HTTP 헤더를 설정할 수 있습니다. 여기서는 JSON 형식의 데이터를
+보내므로 &lt;code class=&quot;language-text&quot;&gt;Content-Type: application/json&lt;/code&gt;으로 설정합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-d &quot;$json_message&quot;&lt;/code&gt;: &lt;code class=&quot;language-text&quot;&gt;-d&lt;/code&gt; 옵션은 POST 요청 시 보낼 데이터를 지정합니다. 여기서는 JSON 형식의 메시지를 전송하므로, 앞서 생성한 &lt;code class=&quot;language-text&quot;&gt;json_message&lt;/code&gt; 변수를 사용합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&quot;$GOOGLE_CHAT_WEBHOOK_URL&quot;&lt;/code&gt;: 마지막으로, 요청을 보낼 URL을 지정해야 합니다. 여기서는 Google Chat의 webhook URL을 사용하므로, 앞서
+설정한 &lt;code class=&quot;language-text&quot;&gt;GOOGLE_CHAT_WEBHOOK_URL&lt;/code&gt; 변수를 사용합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이렇게 구성된 &lt;code class=&quot;language-text&quot;&gt;curl&lt;/code&gt; 명령어가 실행이 완료가 되면 실행 결과를 터미널에 출력합니다. 몇십줄의 결과가 출력되는데 출력하지 않도록 설정할 수도 있습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-s&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-o&lt;/span&gt; /dev/null &lt;span class=&quot;token parameter variable&quot;&gt;-X&lt;/span&gt; POST &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+     &lt;span class=&quot;token parameter variable&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Content-Type: application/json&apos;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+     &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$json_message&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;\&lt;/span&gt;
+     &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$GOOGLE_CHAT_WEBHOOK_URL&lt;/span&gt;&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위에 &lt;code class=&quot;language-text&quot;&gt;curl&lt;/code&gt; 명령어는 다음과 같은 옵션이 추가되었습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-s&lt;/code&gt;: 실행 결과를 터미널에 출력하지 않도록 설정합니다. 이 옵션은 &quot;silent&quot;의 약자로, &lt;code class=&quot;language-text&quot;&gt;curl&lt;/code&gt; 명령어의 실행 과정 중 진행 상황이나 에러 메시지를 터미널에 출력하지 않습니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-o /dev/null&lt;/code&gt;: 실행 결과를 &lt;code class=&quot;language-text&quot;&gt;/dev/null&lt;/code&gt; 파일에 저장하도록 설정합니다. &lt;code class=&quot;language-text&quot;&gt;/dev/null&lt;/code&gt;은 UNIX 및 Linux 시스템에서 사용되는 가상의 파일로, 이 파일로 보내진
+데이터는 모두 무시됩니다. 이 옵션을 사용함으로써, 실행 결과를 파일로 저장하면서 터미널에는 출력하지 않습니다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[🥳 블로그를 시작하며]]></title><description><![CDATA[안녕하세요? Lanky입니다. 현재 프론트엔드 프로그래머로 일하고 있습니다. 블로그… 제가 해보겠습니다! 개발자로써 첫 발을 내딛은 것이 20년 2월이었습니다. 회사 생활을 하면서 블로그도 운영하겠다는 큰 포부’만’ 가진채로 2년+…]]></description><link>https://hyunjoogo.github.io/hello-lanky-kr/</link><guid isPermaLink="false">https://hyunjoogo.github.io/hello-lanky-kr/</guid><pubDate>Sat, 18 Mar 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;안녕하세요? Lanky입니다. 현재 프론트엔드 프로그래머로 일하고 있습니다.&lt;/p&gt;
 &lt;h2&gt;블로그… 제가 해보겠습니다!&lt;/h2&gt;
 &lt;p&gt;개발자로써 첫 발을 내딛은 것이 20년 2월이었습니다. 회사 생활을 하면서 블로그도 운영하겠다는 큰 포부’만’ 가진채로 2년+1개월이 지났습니다.&lt;/p&gt;
 &lt;p&gt;그래도 다행인건 2월부터 블로그를 해야겠다라는 의지가 불타올랐습니다. 그 때 저의 마음을 아주 견고하게 만들어주신 세 분께 감사의 마음 전합니다.&lt;/p&gt;

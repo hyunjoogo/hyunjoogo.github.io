@@ -7,11 +7,9 @@ tags:
 - React
 - React-custom-hook
 - react-hooks/rules-of-hooks
-series: "리액트 커스텀 훅"
+#series: "리액트 커스텀 훅"
 ---
-부제 : useNavigate를 모듈화 시키고 싶어요.
-
-# 상황 : useNavigate()를 모듈로 변경하고 싶어요.
+## 상황 : useNavigate()를 모듈로 변경하고 싶어요.
 
 react-router-dom의 useNavigate는 사용자의 URL를 변경하는 명령형 메서드입니다. (v6 기준)
 

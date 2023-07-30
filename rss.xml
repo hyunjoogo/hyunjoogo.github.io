@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lanky.Blog]]></title><description><![CDATA[Hello :) I'm Lanky.]]></description><link>https://hyunjoogo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 30 Jul 2023 18:50:04 GMT</lastBuildDate><item><title><![CDATA[제대로 MobX를 사용하고 있습니까?]]></title><description><![CDATA[이번에 면접 과제를 진행하면서 MobX를 처음 써보았습니다. MobX…]]></description><link>https://hyunjoogo.github.io/useing-mobx-correctly/</link><guid isPermaLink="false">https://hyunjoogo.github.io/useing-mobx-correctly/</guid><pubDate>Mon, 31 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이번에 면접 과제를 진행하면서 MobX를 처음 써보았습니다. &lt;a href=&quot;https://ko.mobx.js.org/&quot;&gt;MobX 공식문서&lt;/a&gt;와 유튜브 강의를 보면서 구현해 보았는데 과연 내가 제대로 사용하는가가 궁금해졌습니다. 그래서 다시 공식문서를 보면서 복기하고 리팩토링을 해보려고 합니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lanky.Blog]]></title><description><![CDATA[Hello :) I'm Lanky.]]></description><link>https://hyunjoogo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 30 Jul 2023 19:14:39 GMT</lastBuildDate><item><title><![CDATA[MobX Core 개념 제대로 사용하고 있습니까? ]]></title><description><![CDATA[이번에 면접 과제를 진행하면서 MobX를 처음 써보았습니다. MobX…]]></description><link>https://hyunjoogo.github.io/useing-mobx-correctly/</link><guid isPermaLink="false">https://hyunjoogo.github.io/useing-mobx-correctly/</guid><pubDate>Mon, 31 Jul 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이번에 면접 과제를 진행하면서 MobX를 처음 써보았습니다. &lt;a href=&quot;https://ko.mobx.js.org/&quot;&gt;MobX 공식문서&lt;/a&gt;와 유튜브 강의를 보면서 구현해 보았는데 과연 내가 제대로 사용하는가가 궁금해졌습니다. 그래서 다시 공식문서를 보면서 복기하고 리팩토링을 해보려고 합니다.&lt;/p&gt;
 &lt;p&gt;✅ 과제 코드가 외부에 공개될 수도 있으므로 공식문서에 나온 예제로 예시를 보여드립니다.&lt;/p&gt;
-&lt;h1&gt;1. Observable State 만들기&lt;/h1&gt;
-&lt;h2&gt;내가 선택한 방식&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;class + makeObservable&lt;/code&gt; 방식으로 사용했습니다. 강의나 공식문서에서 많이 등장하였고 공식문서 내의 &lt;a href=&quot;https://ko.mobx.js.org/observable-state.html#%ED%81%B4%EB%9E%98%EC%8A%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A7%A7%EC%9D%80-%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C&quot;&gt;클래스에 대한 짧은 참고자료&lt;/a&gt;을 읽고 typescript와 객체지향 프로그래밍을 시도하기 위해서 이 방식으로 선택했습니다.&lt;/p&gt;
+&lt;h2&gt;1. Observable State 만들기&lt;/h2&gt;
+&lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;class + makeObservable&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;저는 이 방식으로 구현했습니다. 강의나 공식문서에서 많이 등장하였고 공식문서 내의 &lt;a href=&quot;https://ko.mobx.js.org/observable-state.html#%ED%81%B4%EB%9E%98%EC%8A%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A7%A7%EC%9D%80-%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C&quot;&gt;클래스에 대한 짧은 참고자료&lt;/a&gt;을 읽고 typescript와 객체지향 프로그래밍을 시도하기 위해서 이 방식으로 선택했습니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// class.ts&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; makeObservable&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; observable&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; computed&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; action&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; flow &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mobx&quot;&lt;/span&gt;  
 
@@ -38,7 +38,6 @@
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2&gt;이런 방식도 있더군요?&lt;/h2&gt;
 &lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;makeAutoObservable&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;factory function + makeAutoObservable&lt;/code&gt; 방식입니다.  공식문서의 탭에서 예제를 확인해보실 수 있습니다. 마치 typescript의 타입 추론처럼 알아서 모든 속성(property)을 기본적으로 추론합니다.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -61,10 +60,10 @@ todosById&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span 
 &lt;blockquote&gt;
 &lt;p&gt;간단한 프로젝트에서는 사용하기 좋을 듯하나 프로젝트의 크기가 커지면 상태를 어디서 어떻게 바꾸었는지 찾는데 오래 걸릴 듯합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2&gt;나의 결론 : 접근 방식은 모두 유효하다.&lt;/h2&gt;
+&lt;h3&gt;결론 : 접근 방식은 모두 유효하다.&lt;/h3&gt;
 &lt;p&gt;다만 프로젝트의 복잡성과 크기, 컨셉에 따라 사용 방식을 다르게 하는 것이 좋을 듯합니다.&lt;/p&gt;
-&lt;h1&gt;2. action을 이용한 state 업데이트&lt;/h1&gt;
-&lt;h2&gt;내가 선택한 방식&lt;/h2&gt;
+&lt;h2&gt;2. action을 이용한 state 업데이트&lt;/h2&gt;
+&lt;h3&gt;makeObservable&lt;/h3&gt;
 &lt;p&gt;클래스를 정의할 때 action을 선언해야 합니다. 다만 action은 state를 수정하려는 함수에서만 사용해야 합니다.
 또, 제가 생각하는 클래스를 이용한 상태관리는 UI 컴포넌트에서 직접 상태를 수정하면 안됩니다. 클래스 내부의 메서드를 통해서 상태가 수정되어야 한다고 생각합니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// ✅ 좋은 예 &lt;/span&gt;
@@ -83,7 +82,6 @@ todosById&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span 
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;sortTypeHandler&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
 	boubler&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sortType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;DEFAULT_SORT_TYPE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;이런 방식도 있더군요2?&lt;/h2&gt;
 &lt;h3&gt;&lt;code class=&quot;language-text&quot;&gt;action&lt;/code&gt; 함수를 이용한 함수 래핑&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 내가 사용한 방식&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
@@ -169,7 +167,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;blockquote&gt;
 &lt;p&gt;꼭 구조 분해 할당을 위해서가 아니라도 사용해야 한다고 생각합니다. 코드의 문맥을 위해 구조 분해 할당을 사용하지 않았지만 잠재적인 문제를 피하는 데 도움이 될 수 있습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h4&gt;비동기 action&lt;/h4&gt;
+&lt;h3&gt;비동기 action&lt;/h3&gt;
 &lt;p&gt;본질적으로 비동기 프로세스에 대해 특별한 처리가 필요하지 않습니다. 하지만 여러 비동기 작업을 처리할 때를 생각한다면 observable를 업데이트하는 모든 단계에 action을 표시하는 것을 권장합니다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;ts&quot;&gt;&lt;pre class=&quot;language-ts&quot;&gt;&lt;code class=&quot;language-ts&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 내가 사용한 예 : 잘못된 예 ❌&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// 클래스 내부&lt;/span&gt;
@@ -213,7 +211,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;blockquote&gt;
 &lt;p&gt;꼭 적용해야 된다고 생각합니다. 원래 작성한 코드는 다행히 정상 작동을 하였습니다. 하지만 비동기 작업이 복잡하고 여러 상태를 변경하였다면 문제가 생겼을 수도 있을 것 같습니다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3&gt;나의 결론 : &lt;code class=&quot;language-text&quot;&gt;action.bound&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;비동기 action&lt;/code&gt;은 필수!&lt;/h3&gt;
+&lt;h3&gt;결론 : &lt;code class=&quot;language-text&quot;&gt;action.bound&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;비동기 action&lt;/code&gt;은 필수!&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;action wrapping&lt;/code&gt;은 선택! 성능의 이슈가 생긴다면 꼭 할 것!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[카카오 Maps API를 이용하여 경로 표시하기]]></title><description><![CDATA[개요 카카오 Map API…]]></description><link>https://hyunjoogo.github.io/kakao-map-api/</link><guid isPermaLink="false">https://hyunjoogo.github.io/kakao-map-api/</guid><pubDate>Sun, 14 May 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;개요&lt;/h1&gt;
 &lt;p&gt;카카오 Map API를 이용하여 사용자가 입력한 출발지, 목적지를 표시하고, 경로를 표시하는 기능을 구현하려고 합니다.
 모델 시나리오는 아래와 같습니다.&lt;/p&gt;

@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lanky.Blog]]></title><description><![CDATA[Hello :) I'm Lanky.]]></description><link>https://hyunjoogo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 01 Aug 2023 12:33:59 GMT</lastBuildDate><item><title><![CDATA[React에서 MobX를 제대로 사용했나?]]></title><description><![CDATA[지난 편에는 MobX Core 개념에 대해 다루어 보았습니다. 이제는 React에서 어떻게 사용할 수 있는지에 대해 알아보도록 하겠습니다. 자세한 내용은 공식문서 - MobX and React…]]></description><link>https://hyunjoogo.github.io/react-mobx-correctly/</link><guid isPermaLink="false">https://hyunjoogo.github.io/react-mobx-correctly/</guid><pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;지난 편에는 MobX Core 개념에 대해 다루어 보았습니다. 이제는 React에서 어떻게 사용할 수 있는지에 대해 알아보도록 하겠습니다. 자세한 내용은 &lt;a href=&quot;https://ko.mobx.js.org/react-integration.html&quot;&gt;공식문서 - MobX and React&lt;/a&gt;를 참조하시기 바랍니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Lanky.Blog]]></title><description><![CDATA[Hello :) I'm Lanky.]]></description><link>https://hyunjoogo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Aug 2023 05:53:25 GMT</lastBuildDate><item><title><![CDATA[브라우저 저장소 어떤 상황에서 사용하나요? ]]></title><description><![CDATA[…]]></description><link>https://hyunjoogo.github.io/storage/</link><guid isPermaLink="false">https://hyunjoogo.github.io/storage/</guid><pubDate>Thu, 03 Aug 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;면접 질문 단골이자 작성자도 질문을 받아본 (하지만 오답+그지같은 대답을 한) 브라우저 저장소에 대해서 알려보려고 합니다. 😭&lt;/p&gt;
+&lt;h2&gt;왜 브라우저 저장소가 필요하나요?&lt;/h2&gt;
+&lt;p&gt;사용자가 웹사이트를 편리하게 사용할 수 있게 하기 위해 필요합니다.&lt;/p&gt;
+&lt;p&gt;예를 들어 사용자가 우리의 웹사이트에서 로그인을 하였습니다. 그리고 다른 페이지로 이동을 했습니다. 이 때 다시 통신을 하겠죠. 클라이언트-서버 통신(이하 통신)은 일회성이기 때문에 사용자는 다시 로그인을 해야합니다.&lt;/p&gt;
+&lt;p&gt;서버는 방금 왔던 사용자도 기억을 못하는 그런 놈입니다. 그래서 매번 내가 누구인지 알려줘야 합니다. 그렇다고 사용자가 매번 로그인을 하는 것은 말도 안되는 일입니다. 그래서 로그인한 정보를 어딘가에 저장을 해두고 통신할 때마다 알려주면 됩니다. 이런 정보를 담을 수 있는 공간을 스토리지(Storage)라고 부릅니다. 특히 웹사이트에서는 쿠키, 로컬 스토리지, 세션 스토리지를 사용합니다.&lt;/p&gt;
+&lt;p&gt;이 삼총사는 해당 도메인에 대한 데이터를 브라우저에 저장합니다.&lt;/p&gt;
+&lt;h2&gt;이 삼총사에 대해서 자세히 알려주세요.&lt;/h2&gt;
+&lt;p&gt;먼저 로컬 스토리지와 세션 스토리지에 대해서 알아보겠습니다. 두 친구를 웹 스토리지라고 부릅니다.
+웹 스토리지는 가볍게 사용하기 좋은 대신에 key와 value 형태로 저장이 가능하고 심지어 key, value는 string 타입만 지원을 합니다. 이 스토리지는 서버로 전송이 되지 않습니다.
+두 친구의 차이가 있다면 로컬 스토리지는 반영구적인 것에 비해 세션 스토리지는 탭 윈도우 단위로 생성 되며 탭 윈도우를 닫으면 사라집니다. 단, 새로고침을 해도 남아있습니다.&lt;/p&gt;
+&lt;p&gt;이제 쿠키입니다. 서버가 클라이언트에게 전송하는 작은 데이터 파일입니다. 이름, 값, 도메인 정보, 경료 정보, 만료 일자와 시간등의 정보가 담겨있습니다. 만료 일자도 설정하실 수 있습니다.&lt;/p&gt;
+&lt;h2&gt;어떤 용도로 사용하면 좋을까요?&lt;/h2&gt;
+&lt;p&gt;특별한 목적이 정해져 있지는 않지만 각 스토리지의 특성을 살려서 사용하는 것이 좋습니다.&lt;/p&gt;
+&lt;p&gt;쿠키: 다시보지 않기 팝업 창
+로컬 스토리지: 자동 로그인 (사용자의 로그인 ID와 비밀번호를 저장)
+세션 스토리지:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;유튜브에서 유저가 마지막으로 설정한 볼륨을 기억함&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;페이자가 변경이 되어서 같은 도메인에 있으므로 기억을 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;입력 폼 임시저장, 비로그인 장바구니 기능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;어디서 확인 가능할까요?&lt;/h2&gt;
+&lt;p&gt;크롬 개발자 도구에서 &quot;Application&quot; 탭에서 확인 가능합니다.&lt;/p&gt;
+&lt;h2&gt;마치며&lt;/h2&gt;
+&lt;p&gt;스토리지마다 특성이 다르므로 그 특성에 맞게 사용하는 것이 좋을 듯합니다.&lt;/p&gt;
+&lt;p&gt;이렇게 명쾌하게 대답을 하지 못했던 저를 반성하며 마치겠습니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React에서 MobX를 제대로 사용했나?]]></title><description><![CDATA[지난 편에는 MobX Core 개념에 대해 다루어 보았습니다. 이제는 React에서 어떻게 사용할 수 있는지에 대해 알아보도록 하겠습니다. 자세한 내용은 공식문서 - MobX and React…]]></description><link>https://hyunjoogo.github.io/react-mobx-correctly/</link><guid isPermaLink="false">https://hyunjoogo.github.io/react-mobx-correctly/</guid><pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;지난 편에는 MobX Core 개념에 대해 다루어 보았습니다. 이제는 React에서 어떻게 사용할 수 있는지에 대해 알아보도록 하겠습니다. 자세한 내용은 &lt;a href=&quot;https://ko.mobx.js.org/react-integration.html&quot;&gt;공식문서 - MobX and React&lt;/a&gt;를 참조하시기 바랍니다.&lt;/p&gt;
 &lt;p&gt;✅ 과제 코드가 외부에 공개될 수도 있으므로 공식문서에 나온 예제로 예시를 보여드립니다.&lt;br&gt;
 ✅ 해당 예제는 MobX 6 버전을 기반으로 작성되었습니다.&lt;/p&gt;
 &lt;hr&gt;
